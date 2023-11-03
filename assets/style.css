@@ -1,0 +1,557 @@
+/* SetUp
+ ========================================================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+html {
+  max-width: 1200px;
+  margin: 0 auto;
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+  background-color: #fff;
+}
+
+body {
+  background-color: #F2F6FF;
+  font-family: "Lato", monospace;
+}
+
+li {
+  list-style: none;
+}
+
+h1 {
+  color: #2D3039;
+  font-family: Lato;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 72.385%; /* 34.745px */
+}
+
+h2 {
+  color: #5ba8fd;
+  font-family: Lato;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 72.385%; /* 23.163px */
+}
+
+h4 {
+  color: #2e90fa;
+  text-align: left;
+  font-family: Lato;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px; /* 125% */
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+a {
+  text-decoration: none;
+  color: #2D3039;
+  background-color: transparent;
+}
+
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted; /* 2 */
+}
+
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder;
+}
+
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+sup {
+  top: -0.5em;
+}
+
+/* Embedded content
+ ========================================================================== */
+/**
+ * Remove the border on images inside links in IE 10.
+ */
+img {
+  border-style: none;
+}
+
+/* Forms
+ ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers.
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit; /* 1 */
+  font-size: 100%; /* 1 */
+  line-height: 1.15; /* 1 */
+  margin: 0; /* 2 */
+}
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input { /* 1 */
+  overflow: visible;
+}
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select { /* 1 */
+  text-transform: none;
+}
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type=button]::-moz-focus-inner,
+[type=reset]::-moz-focus-inner,
+[type=submit]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type=button]:-moz-focusring,
+[type=reset]:-moz-focusring,
+[type=submit]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+/**
+ * Correct the padding in Firefox.
+ */
+fieldset {
+  padding: 0.35em 0.75em 0.625em;
+}
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  box-sizing: border-box; /* 1 */
+  color: inherit; /* 2 */
+  display: table; /* 1 */
+  max-width: 100%; /* 1 */
+  padding: 0; /* 3 */
+  white-space: normal; /* 1 */
+}
+
+/**
+ * Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  vertical-align: baseline;
+}
+
+/**
+ * Remove the default vertical scrollbar in IE 10+.
+ */
+textarea {
+  overflow: auto;
+}
+
+/**
+ * 1. Add the correct box sizing in IE 10.
+ * 2. Remove the padding in IE 10.
+ */
+[type=checkbox],
+[type=radio] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+* Correct the cursor style of increment and decrement buttons in Chrome.
+*/
+[type=number]::-webkit-inner-spin-button,
+[type=number]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * Remove the inner padding in Chrome and Safari on macOS.
+ */
+[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button; /* 1 */
+  font: inherit; /* 2 */
+}
+
+/*Sass class
+========================================================================== */
+.flex-col, .general-container footer .first-container-footer .footer-col .col-link, .general-container footer .first-container-footer .footer-col, .general-container .faqs .content-container .text-container, .general-container .faqs, .general-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-col-center, .general-container footer, .general-container .content-container header label, .general-container .content-container header .first-container-header .second-container-header, .general-container .content-container header .first-container-header, .general-container .content-container header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-row, .general-container footer .second-container-footer div, .general-container footer .first-container-footer .rrss, .general-container footer .first-container-footer, .general-container nav .nav-content ul, .general-container nav .nav-content {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-row-spaceb, .general-container footer .second-container-footer, .general-container .faqs .content-container .q-a-container a, .general-container nav .nav-content .lang, .general-container nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.row-margin-items, .general-container nav .nav-content ul li {
+  margin: 0 1rem;
+}
+
+.span-icon-img, .general-container footer .first-container-footer .rrss span, .general-container .faqs .content-container .q-a-container a .chevron, .general-container nav .nav-content .lang span {
+  display: block;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.general-container .content-container header label input::-moz-placeholder {
+  color: #98A2B3;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Lato;
+  font-size: 16px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 22px; /* 137.5% */
+  letter-spacing: -0.41px;
+}
+
+.placeholder-text-styles, .general-container .content-container header label input::placeholder {
+  color: #98A2B3;
+  font-feature-settings: "clig" off, "liga" off;
+  font-family: Lato;
+  font-size: 16px;
+  font-style: italic;
+  font-weight: 400;
+  line-height: 22px; /* 137.5% */
+  letter-spacing: -0.41px;
+}
+
+.general-container .content-container header label input::-moz-placeholder {
+  background-size: 15px 15px;
+  background-repeat: no-repeat;
+  background-position: 0.2rem center;
+}
+
+.placeholder-icon-setup, .general-container .content-container header label input::placeholder {
+  background-size: 15px 15px;
+  background-repeat: no-repeat;
+  background-position: 0.2rem center;
+}
+
+.chip, .general-container .content-container header .chips-container .aa-chip, .general-container .content-container header .chips-container .ap-chip, .general-container .content-container header .chips-container .ac-chip {
+  display: flex;
+  width: 208px;
+  padding: 16px 8px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  border-radius: 50px;
+}
+
+.epigraph {
+  font-size: 0.8em;
+  text-transform: uppercase;
+  color: #98A2B3;
+}
+
+.vetical-margin, .general-container footer .first-container-footer .footer-col .col-link, .general-container .faqs .content-container .q-a-container a, .general-container .faqs .content-container .text-container p, .general-container .faqs .content-container .text-container, .general-container .content-container header label, .general-container .content-container header .first-container-header .second-container-header p, .general-container .content-container header .first-container-header .second-container-header {
+  margin: 1rem 0;
+}
+
+.icon-w-h, .general-container footer .first-container-footer .rrss span, .general-container .faqs .content-container .q-a-container a .chevron, .general-container nav .nav-content .lang span {
+  width: 16px;
+  height: 16px;
+}
+
+.footer-text-style, .general-container footer .second-container-footer div, .general-container footer .second-container-footer, .general-container footer .first-container-footer .footer-col .col-link a {
+  color: #98A2B3;
+  font-size: 0.8rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 142.857% */
+}
+
+/* Desktop first but...
+ ========================================================================== */
+.general-container {
+  width: 100%;
+  height: auto;
+}
+.general-container nav {
+  width: 100%;
+  padding: 1rem 2rem;
+}
+.general-container nav a picture img {
+  width: 2rem;
+  height: 2rem;
+}
+.general-container nav .nav-content {
+  width: 100%;
+  align-items: center;
+  justify-content: end;
+}
+.general-container nav .nav-content ul {
+  margin: 0 2rem;
+}
+.general-container nav .nav-content ul li a:hover, .general-container nav .nav-content ul li .index {
+  color: #2e90fa;
+}
+.general-container nav .nav-content .lang {
+  width: 8%;
+}
+.general-container nav .nav-content .lang span {
+  background-image: url("./img/icons/lang-icon.svg");
+}
+.general-container .content-container {
+  width: 50%;
+  margin: 0 auto;
+}
+.general-container .content-container header {
+  width: 100%;
+  height: auto;
+  padding: 1rem 0;
+}
+.general-container .content-container header .first-container-header {
+  width: 100%;
+  height: auto;
+  padding: 1rem 0;
+}
+.general-container .content-container header .first-container-header .second-container-header {
+  width: 100%;
+}
+.general-container .content-container header .first-container-header .second-container-header p {
+  color: #98A2B3;
+}
+.general-container .content-container header label {
+  width: 100%;
+}
+.general-container .content-container header label input {
+  width: 80%;
+  border: solid 1px #5ba8fd;
+  border-radius: 50px;
+  background-color: transparent;
+  padding: 0.5em;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.general-container .content-container header label input::-moz-placeholder {
+  padding: 2em;
+  background-image: url("./img/icons/search-icon.svg");
+}
+.general-container .content-container header label input::placeholder {
+  padding: 2em;
+  background-image: url("./img/icons/search-icon.svg");
+}
+.general-container .content-container header .chips-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.general-container .content-container header .chips-container .aa-chip, .general-container .content-container header .chips-container .ap-chip, .general-container .content-container header .chips-container .ac-chip {
+  margin: 0.6rem;
+}
+.general-container .content-container header .chips-container .aa-chip a, .general-container .content-container header .chips-container .ap-chip a, .general-container .content-container header .chips-container .ac-chip a {
+  color: #F2F6FF;
+}
+.general-container .content-container header .chips-container .aa-chip {
+  background-color: #66C8BC;
+}
+.general-container .content-container header .chips-container .ap-chip {
+  background-color: #FD9B64;
+}
+.general-container .content-container header .chips-container .ac-chip {
+  background-color: #DB92FE;
+}
+.general-container .faqs {
+  width: 100%;
+  height: auto;
+  padding: 2rem 0;
+  align-items: left;
+  justify-self: center;
+  background-color: #EAF4FF;
+}
+.general-container .faqs .content-container .text-container {
+  width: 100%;
+  height: auto;
+  align-items: left;
+  justify-content: space-between;
+}
+.general-container .faqs .content-container .q-a-container {
+  width: 100%;
+  height: auto;
+  margin: 2rem 0;
+}
+.general-container .faqs .content-container .q-a-container a {
+  width: 100%;
+  height: auto;
+  color: #98A2B3;
+}
+.general-container .faqs .content-container .q-a-container a .chevron {
+  background-image: url("./img/icons/chevron-icon.svg");
+}
+.general-container .cta {
+  width: 100%;
+  height: auto;
+  background-color: pink;
+}
+.general-container footer {
+  width: 100%;
+  height: auto;
+  padding: 0 2rem;
+}
+.general-container footer .first-container-footer {
+  width: 100%;
+  height: auto;
+  align-items: start;
+  justify-content: space-between;
+  padding: 2rem 1rem;
+}
+.general-container footer .first-container-footer a picture img {
+  width: 2rem;
+  height: 2rem;
+}
+.general-container footer .first-container-footer .footer-col {
+  width: auto;
+  height: auto;
+  align-items: left;
+  justify-content: center;
+}
+.general-container footer .first-container-footer .footer-col .col-link a {
+  margin: 0.5rem 0;
+}
+.general-container footer .first-container-footer .rrss {
+  width: auto;
+  height: auto;
+}
+.general-container footer .first-container-footer .rrss span {
+  margin: 0 0.8rem;
+}
+.general-container footer .first-container-footer .rrss span:nth-child(1) {
+  background-image: url("./img/icons/x-icon.svg");
+}
+.general-container footer .first-container-footer .rrss span:nth-child(2) {
+  background-image: url("./img/icons/f-icon.svg");
+}
+.general-container footer .first-container-footer .rrss span:nth-child(3) {
+  background-image: url("./img/icons/ig-icon.svg");
+}
+.general-container footer .second-container-footer {
+  width: 100%;
+  height: auto;
+}
+.general-container footer .second-container-footer div {
+  align-items: center;
+  justify-content: space-around;
+}
+.general-container footer .second-container-footer div a picture img {
+  width: 2rem;
+  height: 2rem;
+  margin: 0 1rem;
+}/*# sourceMappingURL=style.css.map */
