@@ -7,7 +7,9 @@
     <title>Soporte Decision</title>
     <link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon">
 
-    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
@@ -36,7 +38,7 @@
     
                 <div class="lang">
                     <span></span>
-                    <p>Español</p>
+                    <a href="#">Español</a>
                 </div>
             </div>
            
@@ -55,9 +57,9 @@
                 </div>
     
                 <!-- buscador -->
-                <label for="search">
+                <!-- <label for="search">
                     <input type="text" placeholder="Cómo cambiar mi contraseña">   
-                </label>
+                </label> -->
     
                 <!-- chips -->
                 <div class="chips-container">
@@ -65,7 +67,6 @@
                     <div class="ap-chip"><a href="#">Ayuda con Plan Premium</a></div>
                     <div class="ac-chip"><a href="#">Ayuda con la Cuenta</a></div>
                 </div>
-    
     
             </header>
 
@@ -110,13 +111,26 @@
         </section>
 
         <section class="cta">
-            <h3>Empiece a decidir sobe todo</h3>
-            <p>Utilice DECISION como herramienta para complementar sus elecciones diarias.</p>
 
-            <div class="stores">
-                <span></span>
-                <span></span>
+            <div class="content-cta">
+                <div class="content-text">
+                    <h3>Empiece a decidir sobe todo</h3>
+                    <p>Utilice DECISION como herramienta para complementar sus elecciones diarias.</p>
+                </div>
+            
+                <div class="stores">
+                    <picture class="applestore">
+                        <source media="(min-width:100px)" srcset="./assets/img/apple-store.png">
+                        <img src="./assets/img/apple-store.png"" alt="Apple Store" style="width:auto;">
+                    </picture>
+
+                    <picture class="googlestore">
+                        <source media="(min-width:100px)" srcset="./assets/img/google-store.png">
+                        <img src="./assets/img/google-store.png"" alt="Play Store" style="width:auto;">
+                    </picture>
+                </div>
             </div>
+           
         </section>
 
         <footer>
@@ -151,10 +165,11 @@
                 </div> 
 
                 <div class="rrss">
-                    <span><a href="#" target="_blank"></a></span>
-                    <span><a href="#"  target="_blank"></a></span>
-                    <span><a href="#"  target="_blank"></a></span>
+                    <a href="#" target="_blank"><span class="x"></span></a>
+                    <a href="#"  target="_blank"><span class="ig"></span></a>
+                    <a href="#"  target="_blank"><span class="f"></span></a>
                 </div>
+
             </div>
 
             <div class="second-container-footer">

@@ -1,5 +1,5 @@
 /* SetUp
- ========================================================================== */
+  ========================================================================== */
 * {
   margin: 0;
   padding: 0;
@@ -17,7 +17,7 @@ html {
   margin: 0 auto;
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
-  background-color: #fff;
+  background-color: #F2F6FF;
 }
 
 body {
@@ -276,14 +276,14 @@ textarea {
   flex-direction: column;
 }
 
-.flex-col-center, .general-container footer, .general-container .content-container header label, .general-container .content-container header .first-container-header .second-container-header, .general-container .content-container header .first-container-header, .general-container .content-container header {
+.flex-col-center, .general-container footer, .general-container .beneficios .cards-container .card, .general-container .beneficios, .general-container .content-container header .first-container-header .second-container-header, .general-container .content-container header .first-container-header, .general-container .content-container header {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.flex-row, .general-container footer .second-container-footer div, .general-container footer .first-container-footer .rrss, .general-container footer .first-container-footer, .general-container nav .nav-content ul, .general-container nav .nav-content {
+.flex-row, .general-container footer .second-container-footer div, .general-container footer .first-container-footer .rrss, .general-container footer .first-container-footer, .general-container .beneficios .cards-container, .general-container nav .nav-content ul, .general-container nav .nav-content, .content-cta .stores {
   display: flex;
   flex-direction: row;
 }
@@ -299,14 +299,14 @@ textarea {
   margin: 0 1rem;
 }
 
-.span-icon-img, .general-container footer .first-container-footer .rrss span, .general-container .faqs .content-container .q-a-container a .chevron, .general-container nav .nav-content .lang span {
+.span-icon-img, .general-container .faqs .content-container .q-a-container a .chevron, .general-container nav .nav-content .lang span {
   display: block;
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
 }
 
-.general-container .content-container header label input::-moz-placeholder {
+.placeholder-text-styles {
   color: #98A2B3;
   font-feature-settings: "clig" off, "liga" off;
   font-family: Lato;
@@ -317,24 +317,7 @@ textarea {
   letter-spacing: -0.41px;
 }
 
-.placeholder-text-styles, .general-container .content-container header label input::placeholder {
-  color: #98A2B3;
-  font-feature-settings: "clig" off, "liga" off;
-  font-family: Lato;
-  font-size: 16px;
-  font-style: italic;
-  font-weight: 400;
-  line-height: 22px; /* 137.5% */
-  letter-spacing: -0.41px;
-}
-
-.general-container .content-container header label input::-moz-placeholder {
-  background-size: 15px 15px;
-  background-repeat: no-repeat;
-  background-position: 0.2rem center;
-}
-
-.placeholder-icon-setup, .general-container .content-container header label input::placeholder {
+.placeholder-icon-setup {
   background-size: 15px 15px;
   background-repeat: no-repeat;
   background-position: 0.2rem center;
@@ -357,7 +340,7 @@ textarea {
   color: #98A2B3;
 }
 
-.vetical-margin, .general-container footer .first-container-footer .footer-col .col-link, .general-container .faqs .content-container .q-a-container a, .general-container .faqs .content-container .text-container p, .general-container .faqs .content-container .text-container, .general-container .content-container header label, .general-container .content-container header .first-container-header .second-container-header p, .general-container .content-container header .first-container-header .second-container-header {
+.vetical-margin, .general-container footer .first-container-footer .footer-col .col-link, .general-container footer, .general-container .faqs .content-container .q-a-container a, .general-container .faqs .content-container .text-container p, .general-container .faqs .content-container .text-container, .general-container .beneficios, .general-container .content-container header .first-container-header .second-container-header p, .general-container .content-container header .first-container-header .second-container-header, .general-container .content-container header, .content-cta .content-text {
   margin: 1rem 0;
 }
 
@@ -372,6 +355,56 @@ textarea {
   font-style: normal;
   font-weight: 400;
   line-height: 20px; /* 142.857% */
+}
+
+.font-style-w-lh, .content-cta .extra-p-cta, .content-cta .content-text p, .content-cta .content-text h3 {
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.cta-setup, .general-container .cta-premium, .general-container .cta {
+  width: 100%;
+  height: 20rem;
+  position: relative;
+  display: block;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.content-cta {
+  width: 50%;
+  height: auto;
+  position: absolute;
+  left: 43%;
+  top: 8%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
+}
+.content-cta .content-text {
+  color: #F2F6FF;
+}
+.content-cta .content-text h3 {
+  font-size: 3rem;
+}
+.content-cta .content-text p {
+  font-size: 1rem;
+}
+.content-cta .stores {
+  align-items: center;
+}
+.content-cta .extra-p-cta {
+  color: #F2F6FF;
+  font-size: 0.6rem;
+  letter-spacing: 1px;
+}
+
+.icon-card, .general-container .beneficios .cards-container .card .fc-icon, .general-container .beneficios .cards-container .card .fb-icon, .general-container .beneficios .cards-container .card .fa-icon {
+  width: 4rem;
+  height: 4rem;
 }
 
 /* Desktop first but...
@@ -403,7 +436,10 @@ textarea {
   width: 8%;
 }
 .general-container nav .nav-content .lang span {
-  background-image: url("./img/icons/lang-icon.svg");
+  background-image: url("../assets/img/icons/lang-icon.svg");
+}
+.general-container nav .nav-content .lang a:hover {
+  color: #2e90fa;
 }
 .general-container .content-container {
   width: 50%;
@@ -424,27 +460,6 @@ textarea {
 }
 .general-container .content-container header .first-container-header .second-container-header p {
   color: #98A2B3;
-}
-.general-container .content-container header label {
-  width: 100%;
-}
-.general-container .content-container header label input {
-  width: 80%;
-  border: solid 1px #5ba8fd;
-  border-radius: 50px;
-  background-color: transparent;
-  padding: 0.5em;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-  overflow: hidden;
-}
-.general-container .content-container header label input::-moz-placeholder {
-  padding: 2em;
-  background-image: url("./img/icons/search-icon.svg");
-}
-.general-container .content-container header label input::placeholder {
-  padding: 2em;
-  background-image: url("./img/icons/search-icon.svg");
 }
 .general-container .content-container header .chips-container {
   width: 100%;
@@ -468,6 +483,54 @@ textarea {
 }
 .general-container .content-container header .chips-container .ac-chip {
   background-color: #DB92FE;
+}
+.general-container .beneficios {
+  width: 100%;
+  height: auto;
+  background-color: red;
+}
+.general-container .beneficios .cards-container {
+  width: 100%;
+  height: auto;
+  align-items: center;
+  justify-content: space-between;
+}
+.general-container .beneficios .cards-container .card {
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  width: auto;
+  padding: 2rem 1rem;
+  margin: 0 3rem;
+  border-radius: 0.8rem;
+  background-color: #F2F6FF;
+  box-shadow: 0px 0px 7.60598px 0px #8898BF, 0px 6.76087px 3.38043px 0px rgba(65, 97, 174, 0.25);
+}
+.general-container .beneficios .cards-container .card h4 {
+  color: #2D3039;
+  text-align: center;
+  font-feature-settings: "clig" off, "liga" off;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24.931px;
+}
+.general-container .beneficios .cards-container .card .fa-icon {
+  background-image: url("../assets/img/icons/fa-icon.svg");
+}
+.general-container .beneficios .cards-container .card .fb-icon {
+  background-image: url("../assets/img/icons/fb-icon.svg");
+}
+.general-container .beneficios .cards-container .card .fc-icon {
+  background-image: url("../assets/img/icons/fc-icon.svg");
+}
+.general-container .beneficios .cards-container .card .p-card {
+  color: #98A2B3;
+  text-align: center;
+  font-feature-settings: "clig" off, "liga" off;
+  font-size: 0.8rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
 }
 .general-container .faqs {
   width: 100%;
@@ -494,12 +557,14 @@ textarea {
   color: #98A2B3;
 }
 .general-container .faqs .content-container .q-a-container a .chevron {
-  background-image: url("./img/icons/chevron-icon.svg");
+  background-image: url("../assets/img/icons/chevron-icon.svg");
+  transform: rotate(-90deg);
 }
 .general-container .cta {
-  width: 100%;
-  height: auto;
-  background-color: pink;
+  background-image: url("../assets/img/cta.png");
+}
+.general-container .cta-premium {
+  background-image: url("../assets/img/CTA-premium.png");
 }
 .general-container footer {
   width: 100%;
@@ -533,14 +598,14 @@ textarea {
 .general-container footer .first-container-footer .rrss span {
   margin: 0 0.8rem;
 }
-.general-container footer .first-container-footer .rrss span:nth-child(1) {
-  background-image: url("./img/icons/x-icon.svg");
+.general-container footer .first-container-footer .rrss .x {
+  background-image: url("../assets/img/icons/x-icon.svg");
 }
-.general-container footer .first-container-footer .rrss span:nth-child(2) {
-  background-image: url("./img/icons/f-icon.svg");
+.general-container footer .first-container-footer .rrss .f {
+  background-image: url("../assets/img/icons/f-icon.svg");
 }
-.general-container footer .first-container-footer .rrss span:nth-child(3) {
-  background-image: url("./img/icons/ig-icon.svg");
+.general-container footer .first-container-footer .rrss .ig {
+  background-image: url("../assets/img/icons/ig-icon.svg");
 }
 .general-container footer .second-container-footer {
   width: 100%;
