@@ -58,7 +58,7 @@
        font-size: 2rem;
        font-style: normal;
        font-weight: 500;
-       line-height: 72.385%; /* 23.163px */
+       line-height: normal;
    }
    
    h4{
@@ -93,7 +93,10 @@
        text-decoration: none;
        color: $black;
        background-color: transparent;
-     }
+    }
+    a:hover{
+        color: $primary;
+    }
    
      /**
       * 1. Remove the bottom border in Chrome 57-
@@ -308,47 +311,53 @@
            display: flex;
            flex-direction: column;
        }
+       
       .flex-col-center{
-       display: flex;
-       flex-direction: column;
-       align-items: center;
-       justify-content: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
       }
+
       .flex-row{
-       display: flex;
-       flex-direction: row;
+            display: flex;
+            flex-direction: row;
       }
+
       .flex-row-spaceb{
-       display: flex;
-       flex-direction: row;
-       align-items: center;
-       justify-content: space-between;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
       }
-      .row-margin-items{
-       margin:0 1rem;
-      }
+
+      .row-margin-items{ margin:0 1rem;}
+
       .span-icon-img{
-       display: block;
-       background-repeat: no-repeat;
-       background-position: center;
-       background-size: contain;
+            display: block;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
       }
-      .placeholder-text-styles{
-       color:  #98A2B3;
-       font-feature-settings: 'clig' off, 'liga' off;
-       font-family: Lato;
-       font-size: 16px;
-       font-style: italic;
-       font-weight: 400;
-       line-height: 22px; /* 137.5% */
-       letter-spacing: -0.41px;
-      }
-      .placeholder-icon-setup{
-       background-size: 15px 15px;
-       background-repeat: no-repeat;
-       background-position: .2rem center;
-      }
-      .chip{
+
+    //   .placeholder-text-styles{
+    //         color:  #98A2B3;
+    //         font-feature-settings: 'clig' off, 'liga' off;
+    //         font-family: Lato;
+    //         font-size: 16px;
+    //         font-style: italic;
+    //         font-weight: 400;
+    //         line-height: 22px; /* 137.5% */
+    //         letter-spacing: -0.41px;
+    //   }
+
+    //   .placeholder-icon-setup{
+    //         background-size: 15px 15px;
+    //         background-repeat: no-repeat;
+    //         background-position: .2rem center;
+    //   }
+
+    .chip{
        display: flex;
        width: 208px;
        padding: 16px 8px;
@@ -357,34 +366,38 @@
        gap: 10px;
        flex-shrink: 0;
        border-radius: 50px;
-      }
-      .epigraph{
+    }
+
+    .epigraph{
        font-size: .8em;
        text-transform: uppercase;
        color: $darkgray;
-      }
-      .vetical-margin{
+    }
+
+    .vetical-margin{
        margin: 1rem 0;
-      }
-      .icon-w-h{
+    }
+
+    .icon-w-h{
        width: 16px;
        height: 16px;
-      }
-      .footer-text-style{
+    }
+
+    .footer-text-style{
        color: $darkgray;
        font-size:.8rem;
        font-style: normal;
        font-weight: 400;
        line-height: 20px; /* 142.857% */
-      }
+    }
       
-      .font-style-w-lh{
+    .font-style-w-lh{
         font-style: normal;
         font-weight: 400;
         line-height: normal; 
-      }
+    }
 
-      .cta-setup{
+    .cta-setup{
         width: 100%;
         height: 20rem;
         position: relative;
@@ -392,9 +405,9 @@
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
-      }
+    }
 
-      .content-cta{
+    .content-cta{
         width: 50%;
         height: auto;
         position: absolute;
@@ -429,12 +442,50 @@
             letter-spacing: 1px;
             @extend .font-style-w-lh;
         }
-      }
+    }
 
-      .icon-card{
+    .icon-card{
         width: 4rem;
         height: 4rem;
-      }
+    }
+
+    .setup-section{
+        width: 100%;
+        height: auto;
+        padding: 2rem 0;
+        background-color: $alternativebg;
+    }
+
+    .setup-pasos{
+        @extend .flex-row;
+        align-items: flex-start;
+        margin: 1rem 0;
+    }
+
+    .col-paso{
+        @extend .flex-col;
+        h4{
+            color:$primary;
+            text-align: left;
+            font-size: 1.6rem;
+            font-weight: 400;
+            line-height: auto;
+        }
+        p{
+            margin: .4rem 0;
+            color:$darkgray;
+            text-align: left;
+            font-size: 1rem;
+            font-weight: 400;
+            line-height:auto;
+        }
+    }
+
+    .setup-pasos-icon{
+        width: 3rem;
+        height: 2.5rem;
+        margin-right: 2rem;
+    }
    
      /* Desktop first but...
       ========================================================================== */
@@ -481,9 +532,6 @@
                        @extend .icon-w-h;
                       @extend .span-icon-img;
                        background-image: url('../assets/img/icons/lang-icon.svg');
-                   }
-                   a:hover{
-                    color: $primary;
                    }
                }
            }
@@ -566,14 +614,14 @@
         .beneficios{
             width: 100%;
             height: auto;
-            @extend .vetical-margin;
+            margin: 4rem 0;
             @extend .flex-col-center;
-        
-            background-color: red;
+            
         
             .cards-container{
                 width: 100%;
                 height: auto;
+                margin: 4rem 0;
                 @extend .flex-row;
                 align-items: center;
                 justify-content: space-between;
@@ -629,14 +677,10 @@
 
         // faqs
         .faqs{
-           width: 100%;
-           height: auto;
-           padding: 2rem 0;
            @extend .flex-col;
            align-items: left;
            justify-self: center;
-           background-color: $alternativebg;
-   
+           
            .content-container{
                .text-container{
                    width: 100%;
@@ -671,6 +715,64 @@
                }
            }
        }
+
+        //  section
+        .section{
+            .content-container{
+                width: 80%;
+                margin: 0 auto;
+                @extend .flex-row;  
+                .text-container{
+                    @extend .flex-col;
+                    padding: 2rem;
+                    p{
+                        @extend .vetical-margin;
+                        color: $darkgray;
+                        font-size: 1.4rem;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: normal;
+                    }
+                }
+
+                .content-pasos{
+                   width: 100%;
+                    padding: 2rem 4rem;
+                    @extend .flex-col;
+                    align-items: left;
+                    justify-content: space-around;
+
+                    .paso1{
+                        .paso1-icon{
+                           @extend .setup-pasos-icon;   
+                            background-image: url('../assets/img/icons/paso1-icon.svg');
+                        }  
+                    }
+
+                    .paso2{
+                        .paso2-icon{
+                           @extend .setup-pasos-icon;   
+                            background-image: url('../assets/img/icons/paso2-icon.svg');
+                        }  
+                    }
+
+                    .paso3{
+                        .paso3-icon{
+                           @extend .setup-pasos-icon;   
+                            background-image: url('../assets/img/icons/paso3-icon.svg');
+                        }  
+                    }
+                }
+            }
+            .asterisc{
+                text-align: right;
+                font-size: .6rem;
+                color: $primary60;
+                margin-right: 2rem;
+                letter-spacing: 1px;
+                @extend .font-style-w-lh;
+            }
+        }
    
         // cta
         .cta{
@@ -685,8 +787,8 @@
             background-image: url('../assets/img/CTA-premium.png');
         }
    
-       // footer
-       footer{
+        // footer
+        footer{
            width: 100%;
            height: auto;
            @extend .vetical-margin;
@@ -756,8 +858,5 @@
                    }
                }
            }
-       }
+        }
     }
-   
-   
-   

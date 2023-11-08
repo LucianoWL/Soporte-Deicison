@@ -44,7 +44,7 @@ h2 {
   font-size: 2rem;
   font-style: normal;
   font-weight: 500;
-  line-height: 72.385%; /* 23.163px */
+  line-height: normal;
 }
 
 h4 {
@@ -75,6 +75,10 @@ a {
   text-decoration: none;
   color: #2D3039;
   background-color: transparent;
+}
+
+a:hover {
+  color: #2e90fa;
 }
 
 /**
@@ -271,7 +275,7 @@ textarea {
 
 /*Sass class
 ========================================================================== */
-.flex-col, .general-container footer .first-container-footer .footer-col .col-link, .general-container footer .first-container-footer .footer-col, .general-container .faqs .content-container .text-container, .general-container .faqs, .general-container {
+.flex-col, .general-container footer .first-container-footer .footer-col .col-link, .general-container footer .first-container-footer .footer-col, .general-container .section .content-container .content-pasos, .general-container .section .content-container .text-container, .general-container .faqs .content-container .text-container, .general-container .faqs, .general-container, .col-paso {
   display: flex;
   flex-direction: column;
 }
@@ -283,7 +287,7 @@ textarea {
   justify-content: center;
 }
 
-.flex-row, .general-container footer .second-container-footer div, .general-container footer .first-container-footer .rrss, .general-container footer .first-container-footer, .general-container .beneficios .cards-container, .general-container nav .nav-content ul, .general-container nav .nav-content, .content-cta .stores {
+.flex-row, .general-container footer .second-container-footer div, .general-container footer .first-container-footer .rrss, .general-container footer .first-container-footer, .general-container .section .content-container, .general-container .beneficios .cards-container, .general-container nav .nav-content ul, .general-container nav .nav-content, .setup-pasos, .content-cta .stores {
   display: flex;
   flex-direction: row;
 }
@@ -306,23 +310,6 @@ textarea {
   background-size: contain;
 }
 
-.placeholder-text-styles {
-  color: #98A2B3;
-  font-feature-settings: "clig" off, "liga" off;
-  font-family: Lato;
-  font-size: 16px;
-  font-style: italic;
-  font-weight: 400;
-  line-height: 22px; /* 137.5% */
-  letter-spacing: -0.41px;
-}
-
-.placeholder-icon-setup {
-  background-size: 15px 15px;
-  background-repeat: no-repeat;
-  background-position: 0.2rem center;
-}
-
 .chip, .general-container .content-container header .chips-container .aa-chip, .general-container .content-container header .chips-container .ap-chip, .general-container .content-container header .chips-container .ac-chip {
   display: flex;
   width: 208px;
@@ -340,7 +327,7 @@ textarea {
   color: #98A2B3;
 }
 
-.vetical-margin, .general-container footer .first-container-footer .footer-col .col-link, .general-container footer, .general-container .faqs .content-container .q-a-container a, .general-container .faqs .content-container .text-container p, .general-container .faqs .content-container .text-container, .general-container .beneficios, .general-container .content-container header .first-container-header .second-container-header p, .general-container .content-container header .first-container-header .second-container-header, .general-container .content-container header, .content-cta .content-text {
+.vetical-margin, .general-container footer .first-container-footer .footer-col .col-link, .general-container footer, .general-container .section .content-container .text-container p, .general-container .faqs .content-container .q-a-container a, .general-container .faqs .content-container .text-container p, .general-container .faqs .content-container .text-container, .general-container .content-container header .first-container-header .second-container-header p, .general-container .content-container header .first-container-header .second-container-header, .general-container .content-container header, .content-cta .content-text {
   margin: 1rem 0;
 }
 
@@ -357,7 +344,7 @@ textarea {
   line-height: 20px; /* 142.857% */
 }
 
-.font-style-w-lh, .content-cta .extra-p-cta, .content-cta .content-text p, .content-cta .content-text h3 {
+.font-style-w-lh, .general-container .section .asterisc, .content-cta .extra-p-cta, .content-cta .content-text p, .content-cta .content-text h3 {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -407,6 +394,40 @@ textarea {
   height: 4rem;
 }
 
+.setup-section {
+  width: 100%;
+  height: auto;
+  padding: 2rem 0;
+  background-color: #EAF4FF;
+}
+
+.setup-pasos {
+  align-items: flex-start;
+  margin: 1rem 0;
+}
+
+.col-paso h4 {
+  color: #2e90fa;
+  text-align: left;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: auto;
+}
+.col-paso p {
+  margin: 0.4rem 0;
+  color: #98A2B3;
+  text-align: left;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: auto;
+}
+
+.setup-pasos-icon, .general-container .section .content-container .content-pasos .paso3 .paso3-icon, .general-container .section .content-container .content-pasos .paso2 .paso2-icon, .general-container .section .content-container .content-pasos .paso1 .paso1-icon {
+  width: 3rem;
+  height: 2.5rem;
+  margin-right: 2rem;
+}
+
 /* Desktop first but...
  ========================================================================== */
 .general-container {
@@ -437,9 +458,6 @@ textarea {
 }
 .general-container nav .nav-content .lang span {
   background-image: url("../assets/img/icons/lang-icon.svg");
-}
-.general-container nav .nav-content .lang a:hover {
-  color: #2e90fa;
 }
 .general-container .content-container {
   width: 50%;
@@ -487,11 +505,12 @@ textarea {
 .general-container .beneficios {
   width: 100%;
   height: auto;
-  background-color: red;
+  margin: 4rem 0;
 }
 .general-container .beneficios .cards-container {
   width: 100%;
   height: auto;
+  margin: 4rem 0;
   align-items: center;
   justify-content: space-between;
 }
@@ -533,12 +552,8 @@ textarea {
   line-height: normal;
 }
 .general-container .faqs {
-  width: 100%;
-  height: auto;
-  padding: 2rem 0;
   align-items: left;
   justify-self: center;
-  background-color: #EAF4FF;
 }
 .general-container .faqs .content-container .text-container {
   width: 100%;
@@ -559,6 +574,42 @@ textarea {
 .general-container .faqs .content-container .q-a-container a .chevron {
   background-image: url("../assets/img/icons/chevron-icon.svg");
   transform: rotate(-90deg);
+}
+.general-container .section .content-container {
+  width: 80%;
+  margin: 0 auto;
+}
+.general-container .section .content-container .text-container {
+  padding: 2rem;
+}
+.general-container .section .content-container .text-container p {
+  color: #98A2B3;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.general-container .section .content-container .content-pasos {
+  width: 100%;
+  padding: 2rem 4rem;
+  align-items: left;
+  justify-content: space-around;
+}
+.general-container .section .content-container .content-pasos .paso1 .paso1-icon {
+  background-image: url("../assets/img/icons/paso1-icon.svg");
+}
+.general-container .section .content-container .content-pasos .paso2 .paso2-icon {
+  background-image: url("../assets/img/icons/paso2-icon.svg");
+}
+.general-container .section .content-container .content-pasos .paso3 .paso3-icon {
+  background-image: url("../assets/img/icons/paso3-icon.svg");
+}
+.general-container .section .asterisc {
+  text-align: right;
+  font-size: 0.6rem;
+  color: #5ba8fd;
+  margin-right: 2rem;
+  letter-spacing: 1px;
 }
 .general-container .cta {
   background-image: url("../assets/img/cta.png");
