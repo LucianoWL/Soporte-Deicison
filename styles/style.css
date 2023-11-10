@@ -18,6 +18,7 @@ html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
   background-color: #F2F6FF;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -29,7 +30,7 @@ li {
   list-style: none;
 }
 
-h1 {
+h1, .indice-h2 {
   color: #2D3039;
   font-family: Lato;
   font-size: 2rem;
@@ -57,6 +58,14 @@ h4 {
   line-height: 20px; /* 125% */
 }
 
+h5 {
+  color: #2D3039;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.4rem;
+}
+
 /**
  * 1. Correct the inheritance and scaling of font size in all browsers.
  * 2. Correct the odd `em` font sizing in all browsers.
@@ -79,6 +88,10 @@ a {
 
 a:hover {
   color: #2e90fa;
+}
+
+hr {
+  border: 1px solid #D7DBE3;
 }
 
 /**
@@ -275,7 +288,7 @@ textarea {
 
 /*Sass class
 ========================================================================== */
-.flex-col, .general-container footer .first-container-footer .footer-col .col-link, .general-container footer .first-container-footer .footer-col, .general-container .section .content-container .content-pasos, .general-container .section .content-container .text-container, .general-container .faqs .content-container .text-container, .general-container .faqs, .general-container, .col-paso {
+.flex-col, .general-container footer .first-container-footer .footer-col .col-link, .general-container footer .first-container-footer .footer-col, .general-container .section .content-container .content-pasos, .general-container .section .content-container .text-container, .general-container .faqs, .general-container .content-container .indice ol, .general-container .content-container .indice, .general-container, .text-container, .col-paso {
   display: flex;
   flex-direction: column;
 }
@@ -327,7 +340,7 @@ textarea {
   color: #98A2B3;
 }
 
-.vetical-margin, .general-container footer .first-container-footer .footer-col .col-link, .general-container footer, .general-container .section .content-container .text-container p, .general-container .faqs .content-container .q-a-container a, .general-container .faqs .content-container .text-container p, .general-container .faqs .content-container .text-container, .general-container .content-container header .first-container-header .second-container-header p, .general-container .content-container header .first-container-header .second-container-header, .general-container .content-container header, .content-cta .content-text {
+.vetical-margin, .general-container footer .first-container-footer .footer-col .col-link, .general-container footer, .general-container .section .content-container .text-container p, .general-container .faqs .content-container .q-a-container a, .general-container .content-container .indice .last-date, .general-container .content-container .indice, .general-container .content-container header .first-container-header .second-container-header p, .general-container .content-container header .first-container-header .second-container-header, .general-container .content-container header, .text-container p, .text-container, .content-cta .content-text, h5 {
   margin: 1rem 0;
 }
 
@@ -428,6 +441,18 @@ textarea {
   margin-right: 2rem;
 }
 
+.text-container {
+  width: 100%;
+  height: auto;
+  align-items: left;
+  justify-content: space-between;
+}
+.terms-p-style {
+  font-weight: 400;
+  color: #98A2B3;
+  line-height: 1.2rem;
+}
+
 /* Desktop first but...
  ========================================================================== */
 .general-container {
@@ -462,6 +487,7 @@ textarea {
 .general-container .content-container {
   width: 50%;
   margin: 0 auto;
+  margin-bottom: 4rem;
 }
 .general-container .content-container header {
   width: 100%;
@@ -501,6 +527,29 @@ textarea {
 }
 .general-container .content-container header .chips-container .ac-chip {
   background-color: #DB92FE;
+}
+.general-container .content-container .indice {
+  width: 100%;
+  height: auto;
+  padding: 1rem 0;
+  margin-bottom: 4rem;
+}
+.general-container .content-container .indice ol {
+  align-items: left;
+}
+.general-container .content-container .indice ol li {
+  list-style-type: decimal;
+  color: #2e90fa;
+  margin: 0.4rem 1rem;
+}
+.general-container .content-container .indice ol li a {
+  color: #2e90fa;
+}
+.general-container .content-container .indice .last-date {
+  color: #66C8BC;
+}
+.general-container .content-container .t-c-apartado {
+  margin: 2rem 0;
 }
 .general-container .beneficios {
   width: 100%;
@@ -554,12 +603,6 @@ textarea {
 .general-container .faqs {
   align-items: left;
   justify-self: center;
-}
-.general-container .faqs .content-container .text-container {
-  width: 100%;
-  height: auto;
-  align-items: left;
-  justify-content: space-between;
 }
 .general-container .faqs .content-container .q-a-container {
   width: 100%;
