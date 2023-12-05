@@ -66,6 +66,16 @@ h5 {
   line-height: 1.4rem;
 }
 
+h6 {
+  align-self: stretch;
+  color: #98A2B3;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+  margin: 1rem 0;
+}
+
 /**
  * 1. Correct the inheritance and scaling of font size in all browsers.
  * 2. Correct the odd `em` font sizing in all browsers.
@@ -288,12 +298,12 @@ textarea {
 
 /*Sass class
 ========================================================================== */
-.flex-col, .general-container footer .first-container-footer .footer-col .col-link, .general-container footer .first-container-footer .footer-col, .general-container .section .content-container .content-pasos, .general-container .section .content-container .text-container, .general-container .faqs, .general-container .content-container .indice ol, .general-container .content-container .indice, .general-container, .text-container, .col-paso {
+.flex-col, .general-container footer .first-container-footer .footer-col .col-link, .general-container footer .first-container-footer .footer-col, .general-container .section .content-container .content-pasos, .general-container .section .content-container .text-container, .general-container .faqs, .general-container .content-container .indice, .general-container, .ol, .text-container, .col-paso {
   display: flex;
   flex-direction: column;
 }
 
-.flex-col-center, .general-container footer, .general-container .beneficios .cards-container .card, .general-container .beneficios, .general-container .content-container header .first-container-header .second-container-header, .general-container .content-container header .first-container-header, .general-container .content-container header {
+.flex-col-center, .general-container footer, .general-container .beneficios .cards-container .card, .general-container .beneficios, .general-container .content-container header .first-container-header .second-container-header, .general-container .content-container .header .first-container-header .second-container-header, .general-container .content-container header .first-container-header, .general-container .content-container .header .first-container-header {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -323,7 +333,7 @@ textarea {
   background-size: contain;
 }
 
-.chip, .general-container .content-container header .chips-container .aa-chip, .general-container .content-container header .chips-container .ap-chip, .general-container .content-container header .chips-container .ac-chip {
+.chip, .general-container .content-container header .chips-container .aa-chip, .general-container .content-container header .chips-container .ap-chip, .general-container .content-container header .chips-container .ac-chip, .general-container .content-container .header .chips-container .aa-chip, .general-container .content-container .header .chips-container .ap-chip, .general-container .content-container .header .chips-container .ac-chip {
   display: flex;
   width: 208px;
   padding: 16px 8px;
@@ -340,7 +350,12 @@ textarea {
   color: #98A2B3;
 }
 
-.vetical-margin, .general-container footer .first-container-footer .footer-col .col-link, .general-container footer, .general-container .section .content-container .text-container p, .general-container .faqs .content-container .q-a-container a, .general-container .content-container .indice .last-date, .general-container .content-container .indice, .general-container .content-container header .first-container-header .second-container-header p, .general-container .content-container header .first-container-header .second-container-header, .general-container .content-container header, .text-container p, .text-container, .content-cta .content-text, h5 {
+.bread-crumbs {
+  font-size: 0.8em;
+  color: #98A2B3;
+}
+
+.vetical-margin, .general-container footer .first-container-footer .footer-col .col-link, .general-container footer, .general-container .section .content-container .text-container p, .general-container .faqs .content-container .q-a-container a, .general-container .content-container .indice .last-date, .general-container .content-container .indice, .general-container .content-container header .first-container-header .second-container-header p, .general-container .content-container .header .first-container-header .second-container-header p, .general-container .content-container header .first-container-header .second-container-header, .general-container .content-container .header .first-container-header .second-container-header, .text-container p, .text-container, .content-cta .content-text, h5 {
   margin: 1rem 0;
 }
 
@@ -453,6 +468,35 @@ textarea {
   line-height: 1.2rem;
 }
 
+.ol {
+  align-items: left;
+}
+.ol li {
+  list-style-type: decimal;
+  color: #2e90fa;
+  margin: 0.4rem 1rem;
+}
+.ol li a {
+  color: #2e90fa;
+}
+
+.subtitulos-p {
+  font-size: 1rem;
+  font-style: italic;
+}
+
+.sangria-1 {
+  margin-left: 2rem;
+}
+
+.sangria-2 {
+  margin-left: 3rem;
+}
+
+.sangria-3 {
+  margin-left: 4rem;
+}
+
 /* Desktop first but...
  ========================================================================== */
 .general-container {
@@ -489,23 +533,18 @@ textarea {
   margin: 0 auto;
   margin-bottom: 4rem;
 }
-.general-container .content-container header {
+.general-container .content-container header .first-container-header, .general-container .content-container .header .first-container-header {
   width: 100%;
   height: auto;
   padding: 1rem 0;
 }
-.general-container .content-container header .first-container-header {
-  width: 100%;
-  height: auto;
-  padding: 1rem 0;
-}
-.general-container .content-container header .first-container-header .second-container-header {
+.general-container .content-container header .first-container-header .second-container-header, .general-container .content-container .header .first-container-header .second-container-header {
   width: 100%;
 }
-.general-container .content-container header .first-container-header .second-container-header p {
+.general-container .content-container header .first-container-header .second-container-header p, .general-container .content-container .header .first-container-header .second-container-header p {
   color: #98A2B3;
 }
-.general-container .content-container header .chips-container {
+.general-container .content-container header .chips-container, .general-container .content-container .header .chips-container {
   width: 100%;
   height: auto;
   display: flex;
@@ -513,19 +552,19 @@ textarea {
   justify-content: center;
   flex-wrap: wrap;
 }
-.general-container .content-container header .chips-container .aa-chip, .general-container .content-container header .chips-container .ap-chip, .general-container .content-container header .chips-container .ac-chip {
+.general-container .content-container header .chips-container .aa-chip, .general-container .content-container header .chips-container .ap-chip, .general-container .content-container header .chips-container .ac-chip, .general-container .content-container .header .chips-container .aa-chip, .general-container .content-container .header .chips-container .ap-chip, .general-container .content-container .header .chips-container .ac-chip {
   margin: 0.6rem;
 }
-.general-container .content-container header .chips-container .aa-chip a, .general-container .content-container header .chips-container .ap-chip a, .general-container .content-container header .chips-container .ac-chip a {
+.general-container .content-container header .chips-container .aa-chip a, .general-container .content-container header .chips-container .ap-chip a, .general-container .content-container header .chips-container .ac-chip a, .general-container .content-container .header .chips-container .aa-chip a, .general-container .content-container .header .chips-container .ap-chip a, .general-container .content-container .header .chips-container .ac-chip a {
   color: #F2F6FF;
 }
-.general-container .content-container header .chips-container .aa-chip {
+.general-container .content-container header .chips-container .aa-chip, .general-container .content-container .header .chips-container .aa-chip {
   background-color: #66C8BC;
 }
-.general-container .content-container header .chips-container .ap-chip {
+.general-container .content-container header .chips-container .ap-chip, .general-container .content-container .header .chips-container .ap-chip {
   background-color: #FD9B64;
 }
-.general-container .content-container header .chips-container .ac-chip {
+.general-container .content-container header .chips-container .ac-chip, .general-container .content-container .header .chips-container .ac-chip {
   background-color: #DB92FE;
 }
 .general-container .content-container .indice {
@@ -534,22 +573,18 @@ textarea {
   padding: 1rem 0;
   margin-bottom: 4rem;
 }
-.general-container .content-container .indice ol {
-  align-items: left;
-}
-.general-container .content-container .indice ol li {
-  list-style-type: decimal;
-  color: #2e90fa;
-  margin: 0.4rem 1rem;
-}
-.general-container .content-container .indice ol li a {
-  color: #2e90fa;
-}
 .general-container .content-container .indice .last-date {
   color: #66C8BC;
 }
 .general-container .content-container .t-c-apartado {
-  margin: 2rem 0;
+  margin: 4rem 0;
+}
+.general-container .content-container .t-c-apartado .sub-apartado {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-self: center;
+  padding: 0.4rem 0;
 }
 .general-container .beneficios {
   width: 100%;

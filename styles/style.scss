@@ -78,6 +78,16 @@
     line-height: 1.4rem;
     @extend .vetical-margin;
    }
+
+   h6{
+    align-self: stretch;
+    color: $darkgray;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 20px;
+    margin: 1rem 0;
+   }
    
    /**
     * 1. Correct the inheritance and scaling of font size in all browsers.
@@ -385,6 +395,11 @@
        color: $darkgray;
     }
 
+    .bread-crumbs{
+        font-size: .8em;
+        color: $darkgray;
+    }
+
     .vetical-margin{
        margin: 1rem 0;
     }
@@ -514,6 +529,31 @@
         color: $darkgray;
         line-height: 1.2rem;
     }
+
+    .ol{
+        @extend .flex-col;
+        align-items: left;
+        li{
+            list-style-type:  decimal;
+            color: $primary;
+            margin: .4rem 1rem;
+            a{ color: $primary;}
+        }
+    }
+
+    .subtitulos-p{
+        font-size: 1rem; 
+        font-style: italic;
+    }
+    .sangria-1{
+        margin-left: 2rem;
+    }
+    .sangria-2{
+        margin-left: 3rem;
+    }
+    .sangria-3{
+        margin-left: 4rem;
+    }
    
      /* Desktop first but...
       ========================================================================== */
@@ -572,12 +612,8 @@
             margin-bottom: 4rem;
 
             // header
-            header{
-               width: 100%;
-               height: auto;
-               @extend .vetical-margin;
-               padding: 1rem 0;
-               @extend .flex-col-center;
+            header, .header{
+ 
                .first-container-header{
                    width: 100%;
                    height: auto;
@@ -648,16 +684,6 @@
                 @extend .flex-col;
                 margin-bottom: 4rem;
 
-                ol{
-                    @extend .flex-col;
-                    align-items: left;
-                    li{
-                        list-style-type:  decimal;
-                        color: $primary;
-                        margin: .4rem 1rem;
-                        a{ color: $primary;}
-                    }
-                }
 
                 .last-date{
                     color:$greendefault;
@@ -666,7 +692,16 @@
             }
 
             .t-c-apartado{
-              margin: 2rem 0;
+              margin: 4rem 0;
+              .sub-apartado{
+                display: flex;
+                flex-direction: column;
+                align-items: left;
+                justify-self: center;
+                padding: .4rem 0;
+              }
+
+
             }
         }
 
